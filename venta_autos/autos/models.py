@@ -7,7 +7,7 @@ class Marca(models.Model):
         return self.nombre
     
 class Auto(models.Model):
-    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
+    marcas = models.ForeignKey(Marca, on_delete=models.CASCADE)
     modelo = models.CharField(max_length=100)
     año = models.IntegerField()
     precio = models.DecimalField(max_digits=10, decimal_places=2)
