@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Lista de Autos</h2>
+
+  <a href="{% url 'crear_auto' %}">Crear nuevo auto</a>
+
+  <ul>
+    {% for auto in autos %}
+      <li>
+        {{ auto.nombre }} - {{ auto.marca }} - {{ auto.anio }}
+        <a href="{% url 'editar_auto' auto.pk %}">Editar</a>
+        <a href="{% url 'eliminar_auto' auto.pk %}">Eliminar</a>
+      </li>
+    {% empty %}
+      <li>No hay autos.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'inicio' %}">Volver al inicio</a>
+{% endblock %}
