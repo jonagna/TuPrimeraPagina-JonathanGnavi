@@ -4,15 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Venta de Autos{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f6f2ee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2f2f2f;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: orange;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .user-info {
+            text-align: right;
+        }
+
+        .user-info a {
+            color: #ff944d;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .messages {
+            list-style: none;
+            padding: 10px;
+            margin: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Venta de Autos</h1>
-        <nav>
-            <a href="{% url 'home' %}">Inicio</a>
-        </nav>
+        <div>
+            <h1 style="margin: 0;">Venta de Autos</h1>
+            <nav>
+                <a href="{% url 'home' %}">Inicio</a>
+                <a href="{% url 'lista_autos' %}">Autos</a>
+                <a href="{% url 'lista_marcas' %}">Marcas</a>
+                <a href="{% url 'lista_clientes' %}">Clientes</a>
+                <a href="{% url 'about' %}">Acerca de</a>
+
+            </nav>
+        </div>
+        <div class="user-info">
+            {% if user.is_authenticated %}
+                Hola, {{ user.username }} |
+                <a href="{% url 'logout' %}">Cerrar sesión</a>
+            {% else %}
+                <a href="{% url 'login' %}">Iniciar sesión</a>
+            {% endif %}
+        </div>
     </header>
+
     <main>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         {% block content %}{% endblock %}
     </main>
 </body>

@@ -1,28 +1,31 @@
-# Entrega_3
+# Python Comisión 75140
 
-# Alumno
+Alumno: Jonathan Gnavi
 
-Jonathan Gnavi
+# De qué se trata el proyecto
 
-# Proyecto Venta de Autos
+Este es un proyecto web desarrollado con Django como parte del curso de Python de Coderhouse. La aplicación simula una tienda de venta de autos, permitiendo gestionar autos, marcas y clientes a través de un sistema completo de CRUD (crear, leer, actualizar y eliminar). 
 
-Este es un proyecto web desarrollado en el framework Django para la gestión y venta de autos.
+Además, el sitio cuenta con autenticación de usuarios (login y logout) y una página "About" que explica el objetivo de la plataforma.
 
-# Tecnologías
+# Cómo ejecutarlo
 
-- Django
-- Python
+1. Clonar el repositorio:
 
-# Método de prueba
+   git clone https://github.com/jonagna/TuPrimeraPagina-JonathanGnavi.git
+   cd TuPrimeraPagina-JonathanGnavi/venta_autos
 
-- Clonar el siguiente código del repositorio: https://github.com/jonagna/TuPrimeraPagina-JonathanGnavi.git
-
-- Ingresar a http://127.0.0.1:8000 para visualizar el contenido de la página.
-
-- Ingresar a http://127.0.0.1:8000/admin/ para utilizar el super usuario creado.
 
 # Usuario y clave de ingreso a la página web:
 
 Usuario: admin
 Constraseña: 123
+
+# Mejoras a futuro:
+
+Validación de formularios personalizada
+
+Filtrado y búsqueda avanzada de autos y clientes
+
+Carga de imágenes para autos
 

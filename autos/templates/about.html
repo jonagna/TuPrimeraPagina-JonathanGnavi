@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block content %}
+  <h2>Acerca de</h2>
+  <p>Este es un proyecto creado para la entrega final de Django. 
+  Aquí se gestionan autos, marcas y clientes. También cuenta con autenticación de usuarios.</p>
+
+  <a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock %}
+
+

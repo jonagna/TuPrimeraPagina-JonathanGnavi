@@ -22,5 +22,7 @@ urlpatterns = [
 
     
     path('inicio/', views.inicio, name='inicio'),
+    path('about/', views.about, name='about'),
+
 ]
 

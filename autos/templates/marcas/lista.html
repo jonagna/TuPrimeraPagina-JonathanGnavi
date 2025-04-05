@@ -1,12 +1,18 @@
-<h1>Lista de marcas</h1>
-<a href="{% url 'crear_marca' %}">Crear nueva marca</a>
+{% extends 'base.html' %}
 
-<ul>
-  {% for marca in marcas %}
-    <li>
-      {{ marca.nombre }}
-      <a href="{% url 'editar_marca' marca.id %}">Editar</a>
-      <a href="{% url 'eliminar_marca' marca.id %}">Eliminar</a>
-    </li>
-  {% endfor %}
-</ul>
+{% block title %}Lista de Marcas{% endblock %}
+
+{% block content %}
+  <h2>Marcas</h2>
+  <a href="{% url 'crear_marca' %}">Agregar nueva marca</a>
+  <ul>
+    {% for marca in marcas %}
+      <li>
+        {{ marca.nombre }}
+        <a href="{% url 'editar_marca' marca.pk %}">Editar</a>
+        <a href="{% url 'eliminar_marca' marca.pk %}">Eliminar</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock %}

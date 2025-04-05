@@ -82,10 +82,13 @@ def eliminar_cliente(request, pk):
         return redirect('lista_clientes')
     return render(request, 'clientes/confirmar_eliminar.html', {'obj': cliente})
 
-from django.shortcuts import render
+
 
 def inicio(request):
     return render(request, 'inicio.html')
+
+def about(request):
+    return render(request, 'about.html')
 
 
 

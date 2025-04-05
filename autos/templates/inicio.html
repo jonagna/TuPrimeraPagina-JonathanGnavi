@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Inicio</title>
-</head>
-<body>
-    <h1>Bienvenido a la Concesionaria</h1>
-    <ul>
-        <li><a href="{% url 'lista_marcas' %}">Ver Marcas</a></li>
-        <li><a href="{% url 'lista_autos' %}">Ver Autos</a></li>
-        <li><a href="{% url 'lista_clientes' %}">Ver Clientes</a></li>
-    </ul>
-</body>
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <h2>Bienvenido a la Venta de Autos</h2>
+    <p>Elegí una opción del menú o usá el login arriba a la derecha.</p>
+{% endblock %}
+
 </html>
