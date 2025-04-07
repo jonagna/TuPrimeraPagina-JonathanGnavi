@@ -13,7 +13,7 @@ Además, el sitio cuenta con autenticación de usuarios (login y logout) y una p
 1. Clonar el repositorio:
 
    git clone https://github.com/jonagna/TuPrimeraPagina-JonathanGnavi.git
-   cd TuPrimeraPagina-JonathanGnavi/venta_autos
+   cd TuPrimeraPagina-JonathanGnavi
 
 
 # Usuario y clave de ingreso a la página web:
