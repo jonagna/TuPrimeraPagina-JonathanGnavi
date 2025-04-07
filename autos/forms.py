@@ -9,7 +9,7 @@ class MarcaForm(forms.ModelForm):
 class AutoForm(forms.ModelForm):
     class Meta:
         model = Auto
-        fields = ['marca', 'modelo', 'anio', 'precio']
+        fields = ['marca', 'modelo', 'año', 'precio']
 
 class ClienteForm(forms.ModelForm):
     class Meta:

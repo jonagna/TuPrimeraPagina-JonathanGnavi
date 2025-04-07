@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Inicio{% endblock %}
+{% block title %}Página de inicio{% endblock %}
 
 {% block content %}
-    <h2>Bienvenido a la Venta de Autos</h2>
-    <p>Elegí una opción del menú o usá el login arriba a la derecha.</p>
-{% endblock %}
+    <h1>Bienvenido a la página de inicio</h1>
+    <p>Este es el contenido específico de la página de inicio.</p>
 
-</html>
+    
+    <img src="{% static 'autos/bannerimg.jpg' %}" 
+         alt="Autos deportivos" 
+         style="width: 100%; height: 500px; object-fit: cover; 
+                border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+                margin-top: 20px; margin-bottom: 20px;">
+{% endblock %}

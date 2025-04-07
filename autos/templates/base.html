@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Venta de Autos{% endblock %}</title>
@@ -68,7 +69,6 @@
                 <a href="{% url 'lista_marcas' %}">Marcas</a>
                 <a href="{% url 'lista_clientes' %}">Clientes</a>
                 <a href="{% url 'about' %}">Acerca de</a>
-
             </nav>
         </div>
         <div class="user-info">
@@ -94,3 +94,4 @@
     </main>
 </body>
 </html>
+

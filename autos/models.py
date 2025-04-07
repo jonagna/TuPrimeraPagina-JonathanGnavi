@@ -9,7 +9,7 @@ class Marca(models.Model):
 class Auto(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
     modelo = models.CharField(max_length=100)
-    anio = models.PositiveIntegerField()
+    año = models.PositiveIntegerField()
     precio = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
