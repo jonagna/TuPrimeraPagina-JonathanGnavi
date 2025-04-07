@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 
+{% block title %}Lista de Autos{% endblock %}
+
 {% block content %}
-  <h2>Lista de Autos</h2>
+    <h2>Lista de Autos</h2>
 
-  <a href="{% url 'crear_auto' %}">Crear nuevo auto</a>
+    <a href="{% url 'crear_auto' %}">Crear nuevo auto</a>
 
-  <ul>
-    {% for auto in autos %}
-      <li>
-        {{ auto.nombre }} - {{ auto.marca }} - {{ auto.anio }}
-        <a href="{% url 'editar_auto' auto.pk %}">Editar</a>
-        <a href="{% url 'eliminar_auto' auto.pk %}">Eliminar</a>
-      </li>
-    {% empty %}
-      <li>No hay autos.</li>
-    {% endfor %}
-  </ul>
+    <ul>
+        {% for auto in autos %}
+            <li>
+                <strong>Marca:</strong> {{ auto.marca.nombre }} <br>
+                <strong>Modelo:</strong> {{ auto.modelo }} <br>
+                <strong>Precio:</strong> ${{ auto.precio }} <br>
+                <a href="{% url 'editar_auto' auto.id %}">Editar</a> |
+                <a href="{% url 'eliminar_auto' auto.id %}">Eliminar</a>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
 
-  <a href="{% url 'inicio' %}">Volver al inicio</a>
+    <a href="{% url 'home' %}">Volver al inicio</a>
 {% endblock %}
